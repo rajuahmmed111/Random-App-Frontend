@@ -5,6 +5,7 @@ import { User, LogOut } from "lucide-react";
 import { ThemeToggle } from "@/src/components/theme-toggle";
 import type { UserType } from "@/src/lib/types";
 import { NotificationDropdown } from "./notification-dropdown";
+import Link from "next/link";
 
 interface RoadmapHeaderProps {
   user: UserType;
@@ -28,6 +29,14 @@ export function RoadmapHeader({ user, onLogout }: RoadmapHeaderProps) {
 
           {/*Notification Dropdown */}
           <NotificationDropdown userId={user.id} />
+
+          {/* Features Page Link */}
+          <Link href="/features">
+            <Button variant="ghost" size="sm">
+              Features
+            </Button>
+          </Link>
+
           <div className="flex items-center gap-2 px-3 py-1 rounded-md bg-muted">
             <User className="w-4 h-4" />
             <span className="text-sm font-medium">{user.username}</span>
