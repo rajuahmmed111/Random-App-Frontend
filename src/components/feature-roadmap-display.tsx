@@ -27,6 +27,7 @@ import {
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
+import Link from "next/link";
 
 const getFeatureIcon = (category: string) => {
   const icons = {
@@ -255,6 +256,13 @@ export function FeatureRoadmapDisplay() {
         <p className="text-xl text-muted-foreground">
           Strategic features to make your roadmap app world-class
         </p>
+      </div>
+
+      {/* go back home button */}
+      <div className="flex justify-end">
+        <Button asChild>
+          <Link href="/">Go Back Home</Link>
+        </Button>
       </div>
 
       <Tabs defaultValue="features" className="w-full">
