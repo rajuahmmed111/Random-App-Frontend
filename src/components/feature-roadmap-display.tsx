@@ -259,7 +259,7 @@ export function FeatureRoadmapDisplay() {
       </div>
 
       {/* go back home button */}
-      <div className="flex justify-end">
+      <div className="flex">
         <Button asChild>
           <Link href="/">Go Back Home</Link>
         </Button>
